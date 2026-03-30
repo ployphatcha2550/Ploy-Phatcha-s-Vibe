@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ploy Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- INTRO SCREEN -->
+<section id="intro">
+
+  <div class="welcome-title">
+    <span class="name">Ploy Phatcha’s</span>
+    <span class="portfolio">Portfolio</span>
+  </div>
+
+  <button onclick="enterSite()">Enter my world</button>
+
+  <img src="IMG_2667.PNG" class="photo1" onclick="openModal(this)">
+
+  <div class="intro-photo">
+    <img src="pl.jpg" class="intro-img" onclick="openModal(this)">
+  </div>
+
+</section>
+
+<!-- Modal for Image -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+  document.getElementById("imgModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+ <!-- Main -->
+<div id="main-content" style="display: none;">
+
+<nav class="navbar">
+<a href="#home">Home</a>
+<a href="#about">About Me</a>
+<a href="#inspired">Inspiration</a>
+<a href="#contact">Contact</a>
+</nav>
+  
+ <!-- Home -->
+ <section id="home" class="hero-main">
+  <h1>Ploy Phatcha</h1>
+  <p>This is the first website I’ve built with my own hands — a reflection of my journey as a student and a tech explorer</p>
+  <p>Every click and scroll reveals a piece of what inspires me and what I’m building</p>
+  <p>So dive in and let’s explore the world I’m creating!!</p>
+</section>
+
+ <!-- About -->
+<section id="about" class="section">
+    <div class="about-stack">
+
+      <div class="card letter-card">
+        <h2>About me</h2>
+        <p>
+          Hi, I’m Ploy Phatcharakon Chuainui, a cybersecurity student who thrives on creativity—whether coding, innovating, or embracing tech.
+        </p>
+        <p>
+          My goal is simple: to reflect who I am and leave something meaningful behind. 
+        </p>
+        <p>
+          This portfolio is my first self-built website—so thank you for coming to check it out!
+        </p>
+      </div>
+
+      <div class="card photo-card">
+        <img src="IMG_0162.JPG" class="profile-img" onclick="openModal()">
+      </div>
+    </div>
+</section>
+
+ <!-- Inspired -->
+<section id="inspired" class="section inspired-section">
+  <div class="inspired-wrapper">
+
+    <h2 class="inspired-top-title">Inspiration</h2>
+
+    <div class="inspired-stack">
+
+      <!-- CARD 1 -->
+      <div class="inspired-card active" onclick="openInspiredCard(this)">
+        <div class="inspired-tab">PEOPLE</div>
+
+        <div class="inspired-content">
+          <div class="inspired-image">
+            <img src="h.avif" alt="people inspiration">
+          </div>
+
+          <div class="inspired-text">
+            <h3>People - Stories that shape who I am.</h3>
+<p class="inspire-text">
+People inspire me through their stories, their kindness, and the connections we share.
+Whether it’s friends, family, or even random people I’ve just met,each person brings a unique piece of what it means to be human and shapes how I see the world.
+</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="inspired-card" onclick="openInspiredCard(this)">
+        <div class="inspired-tab">PLACES</div>
+
+        <div class="inspired-content">
+          <div class="inspired-image">
+            <img src="d.avif" alt="places inspiration">
+          </div>
+
+          <div class="inspired-text">
+            <h3>Places – Spaces that leave a mark on my soul.</h3>
+            <p class="inspire-text">
+  Places inspire me because every place has its own story, and I believe that if you dream of going somewhere,
+  that story already has your name written on it—it’s just waiting for you to go and claim your chance.
+  </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="inspired-card" onclick="openInspiredCard(this)">
+        <div class="inspired-tab">PERSPECTIVES</div>
+
+        <div class="inspired-content">
+          <div class="inspired-image">
+            <img src="e.jpg" alt="Art direction inspiration">
+          </div>
+
+          <div class="inspired-text">
+            <h3>Perspective – Ways of seeing that change everything.</h3>
+            <p class="inspire-text">
+  Perspective shapes everything because even when we see the same people and places,
+  we do not see them in the same way. In the end, it is your perspective that makes the story yours.
+  </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+ <!-- Contact -->
+<section id="contact" class="contact-section">
+  <div class="contact-wrapper">
+
+<!-- LEFT: postcard / envelope -->
+<div class="postcard-box">
+
+  <p class="postcard-label">Contact</p>
+
+  <div class="postcard-text">
+    <p>
+      This is my little corner to stay connected with me  
+      Feel free to explore my socials and be part of my creative world.
+    </p>
+  </div>
+
+  <p class="inspo-label">Inspired by this creator </p>
+
+  <!-- video-->
+  <div class="video-frame">
+    <iframe
+      src="https://www.youtube.com/embed/fUN2TZoohk8"
+      title="YouTube video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+
+</div>
+
+<!-- RIGHT: clickable image icons -->
+    <div class="contact-icons">
+
+      <a href="https://www.instagram.com/ploy.phatcha_?igsh=MWZhOTI5dzF0aTZsYw==" target="_blank" class="icon-card">
+        <img src="ig.png" alt="Instagram" class="stamp">
+        
+      </a>
+
+      <a href="https://www.facebook.com/phatcharakon.chuainui?" target="_blank" class="icon-card">
+        <img src="fb.png" alt="Facebook" class="stamp">
+        
+      </a>
+
+      <a href="https://youtube.com/@phatchalovesmatcha?si=fF-5ol-z1xSf65YG" target="_blank" class="icon-card">
+        <img src="yt.png" alt="YouTube" class="stamp">\
+        
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+ <!-- Label -->
+<body class="home"></body>
+<div class="marquee-container" id="marquee">
+<div class="marquee-track">
+<span>Thanks for being here — it means a lot </span>
+<span class="space"></span>
+<span>Created by Ploy Phatcha </span>
+<span class="space"></span>
+<span>Thanks for being here — it means a lot </span>
+<span class="space"></span>
+<span>Created by Ploy Phatcha </span>
+
+<!-- duplicate -->
+<span>Thanks for being here — it means a lot </span>
+<span class="space"></span>
+<span>Created by Ploy Phatcha </span>
+<span class="space"></span>
+<span>Thanks for being here — it means a lot </span>
+<span class="space"></span>
+<span>Created by Ploy Phatcha </span>
+</div>
+</div>
+
+<script>
+const marquee = document.getElementById("marquee");
+
+window.addEventListener("scroll", () => {
+if (window.scrollY + window.innerHeight > document.body.scrollHeight - 100) {
+marquee.classList.add("show");
+} else {
+marquee.classList.remove("show");
+}
+});
+</script>
+
+
+<div id="popup">
+  <img id="popup-img">
+</div>
+
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+function openModal() {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const img = document.querySelector(".profile-img");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+    if (!target) return;
+
+    const offset = 80; 
+    const targetPosition = target.offsetTop - offset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth"
+    });
+  });
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade-in").forEach(el => {
+  observer.observe(el);
+});
+</script>
